@@ -18,11 +18,25 @@
         body {
             font-family: 'Inter', sans-serif;
             overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+        }
+        
+        html {
+            overflow-x: hidden;
         }
         
         .logo-font {
             font-family: 'Anton', sans-serif;
             letter-spacing: 0.1em;
+        }
+        
+        /* Réduire espacement sur mobile pour que le titre rentre */
+        @media (max-width: 768px) {
+            .page-title {
+                letter-spacing: 0.02em;
+                font-size: 2.5rem;
+            }
         }
         
         .nav-link {
