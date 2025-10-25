@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos - NATIC</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .logo-font {
+            font-family: 'Anton', sans-serif;
+            letter-spacing: 0.1em;
+        }
+        
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            transform: translateY(-2px);
+        }
+        
+        .about-image {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(165, 42, 42, 0.3), rgba(0, 0, 0, 0.5));
+            z-index: 1;
+        }
+        
+        .about-image img {
+            transition: transform 0.5s ease;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full p-6 bg-black/90 backdrop-blur-sm z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="logo-font text-4xl md:text-5xl text-[#A52A2A] font-bold hover:text-[#8B2323] transition-colors duration-300 cursor-pointer">
+                NATIC
+            </a>
+            <div class="flex gap-8">
+                <a href="index.html" class="nav-link text-white hover:text-[#A52A2A] font-semibold">ACCUEIL</a>
+                <a href="about.html" class="nav-link text-[#A52A2A] font-semibold">À PROPOS</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h1 class="page-title logo-font text-6xl md:text-8xl text-[#A52A2A] mb-6 opacity-0">
+                À PROPOS
+            </h1>
+            <div class="page-subtitle w-24 h-1 bg-[#A52A2A] opacity-0"></div>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <!-- Story Section -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-32">
+                <div class="story-text order-2 lg:order-1 flex flex-col justify-center opacity-0">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">L'Histoire de NATIC</h2>
+                    <div class="space-y-4 text-gray-300 text-lg leading-relaxed">
+                        <p>
+                            NATIC est né d'une passion pour la mode et d'une vision claire : créer des vêtements qui allient élégance, confort et durabilité.
+                        </p>
+                        <p>
+                            Chaque collection est le fruit d'un travail méticuleux, où chaque détail compte. Nous croyons que la mode doit être accessible tout en restant exceptionnelle.
+                        </p>
+                        <p>
+                            Notre engagement envers la qualité et l'innovation nous pousse à repousser constamment les limites du design contemporain.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="story-image order-1 lg:order-2 about-image rounded-lg overflow-hidden opacity-0">
+                    <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&h=600&fit=crop" 
+                         alt="Collection NATIC" 
+                         class="w-full h-[500px] object-cover">
+                </div>
+            </div>
+
+            <!-- Founder Section -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-32">
+                <div class="founder-image about-image rounded-lg overflow-hidden opacity-0">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop" 
+                         alt="Fondateur" 
+                         class="w-full h-[500px] object-cover">
+                </div>
+                
+                <div class="founder-text flex flex-col justify-center opacity-0">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Le Créateur</h2>
+                    <div class="space-y-4 text-gray-300 text-lg leading-relaxed">
+                        <p>
+                            Derrière NATIC se trouve une vision audacieuse et une passion débordante pour l'art vestimentaire. 
+                        </p>
+                        <p>
+                            Avec des années d'expérience dans l'industrie de la mode, j'ai appris que les meilleurs vêtements sont ceux qui racontent une histoire et créent une connexion émotionnelle.
+                        </p>
+                        <p>
+                            NATIC représente mon engagement à créer une mode qui inspire, qui ose et qui reste fidèle à son identité unique.
+                        </p>
+                    </div>
+                    <div class="mt-8">
+                        <div class="text-2xl font-bold text-[#A52A2A]">Elena</div>
+                        <div class="text-gray-400">Fondatrice & Directrice Créative</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Values Section -->
+            <div class="values-section opacity-0">
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-16">Nos Valeurs</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="value-card text-center p-8 bg-zinc-900 rounded-lg border-2 border-transparent hover:border-[#A52A2A] transition-all duration-300">
+                        <div class="text-5xl mb-4">💎</div>
+                        <h3 class="text-xl font-bold mb-3 text-[#A52A2A]">Excellence</h3>
+                        <p class="text-gray-400">Nous visons la perfection dans chaque création.</p>
+                    </div>
+                    
+                    <div class="value-card text-center p-8 bg-zinc-900 rounded-lg border-2 border-transparent hover:border-[#A52A2A] transition-all duration-300">
+                        <div class="text-5xl mb-4">🎨</div>
+                        <h3 class="text-xl font-bold mb-3 text-[#A52A2A]">Créativité</h3>
+                        <p class="text-gray-400">L'innovation est au cœur de notre ADN.</p>
+                    </div>
+                    
+                    <div class="value-card text-center p-8 bg-zinc-900 rounded-lg border-2 border-transparent hover:border-[#A52A2A] transition-all duration-300">
+                        <div class="text-5xl mb-4">🤝</div>
+                        <h3 class="text-xl font-bold mb-3 text-[#A52A2A]">Authenticité</h3>
+                        <p class="text-gray-400">Nous restons fidèles à notre vision.</p>
+                    </div>
+                    
+                    <div class="value-card text-center p-8 bg-zinc-900 rounded-lg border-2 border-transparent hover:border-[#A52A2A] transition-all duration-300">
+                        <div class="text-5xl mb-4">🌱</div>
+                        <h3 class="text-xl font-bold mb-3 text-[#A52A2A]">Durabilité</h3>
+                        <p class="text-gray-400">Une mode responsable pour l'avenir.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-20 px-6 opacity-0">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Rejoignez l'Aventure NATIC</h2>
+            <p class="text-xl text-gray-300 mb-8">
+                Découvrez nos collections et faites partie de notre communauté.
+            </p>
+            <a href="index.html" class="inline-block bg-[#A52A2A] text-white px-8 py-4 text-lg font-semibold hover:bg-[#8B2323] transition-all duration-300 hover:scale-105">
+                RETOUR À L'ACCUEIL
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-zinc-800 py-8 mt-20">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-gray-500">© 2025 NATIC. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="about.js"></script>
+</body>
+</html>
+
