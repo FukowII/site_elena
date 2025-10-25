@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.registerPlugin(ScrollTrigger);
     
     // Page title animation
+    const isMobile = window.innerWidth < 768;
+    
     gsap.to('.page-title', {
         opacity: 1,
         x: 0,
@@ -12,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     gsap.from('.page-title', {
-        x: -100,
+        x: isMobile ? 0 : -100, // Pas de décalage sur mobile
         duration: 1.2,
         ease: 'power3.out',
         delay: 0.2
