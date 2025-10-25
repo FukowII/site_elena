@@ -188,6 +188,10 @@ function createEnhancedTShirt() {
     group.add(fold2);
     
     tshirt = group;
+    
+    // Réduire la taille globale du t-shirt de 30%
+    tshirt.scale.set(0.7, 0.7, 0.7);
+    
     scene.add(tshirt);
     
     // Initial rotation for better view
