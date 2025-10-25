@@ -5,20 +5,31 @@ document.addEventListener('DOMContentLoaded', () => {
     // Page title animation
     const isMobile = window.innerWidth < 768;
     
-    gsap.to('.page-title', {
-        opacity: 1,
-        x: 0,
-        duration: 1.2,
-        ease: 'power3.out',
-        delay: 0.2
-    });
-    
-    gsap.from('.page-title', {
-        x: isMobile ? 0 : -100, // Pas de décalage sur mobile
-        duration: 1.2,
-        ease: 'power3.out',
-        delay: 0.2
-    });
+    if (isMobile) {
+        // Sur mobile : seulement fade in, pas de mouvement horizontal
+        gsap.to('.page-title', {
+            opacity: 1,
+            duration: 1.2,
+            ease: 'power3.out',
+            delay: 0.2
+        });
+    } else {
+        // Sur desktop : animation depuis la gauche
+        gsap.to('.page-title', {
+            opacity: 1,
+            x: 0,
+            duration: 1.2,
+            ease: 'power3.out',
+            delay: 0.2
+        });
+        
+        gsap.from('.page-title', {
+            x: -100,
+            duration: 1.2,
+            ease: 'power3.out',
+            delay: 0.2
+        });
+    }
     
     // Page subtitle (line) animation
     gsap.to('.page-subtitle', {
