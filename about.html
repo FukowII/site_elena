@@ -52,16 +52,7 @@
             overflow: hidden;
         }
         
-        .about-image::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(165, 42, 42, 0.3), rgba(0, 0, 0, 0.5));
-            z-index: 1;
-        }
+        /* Gradient overlay supprimé */
         
         .about-image img {
             transition: transform 0.5s ease;
@@ -81,7 +72,7 @@
             </a>
             <div class="flex gap-8">
                 <a href="index.html" class="nav-link text-black hover:text-gray-600 font-semibold">ACCUEIL</a>
-                <a href="about.html" class="nav-link text-gray-600 font-semibold">À PROPOS</a>
+                <a href="about.html" class="nav-link text-black hover:text-gray-600 font-semibold">À PROPOS</a>
             </div>
         </div>
     </nav>
@@ -103,7 +94,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-32">
                 <div class="story-text order-2 lg:order-1 flex flex-col justify-center opacity-0">
                     <h2 class="text-4xl md:text-5xl font-bold mb-6">L'Histoire de NATIC</h2>
-                    <div class="space-y-4 text-gray-300 text-lg leading-relaxed">
+                    <div class="space-y-4 text-black text-lg leading-relaxed">
                         <p>
                             NATIC est né d'une passion pour la mode et d'une vision claire : créer des vêtements qui allient élégance, confort et durabilité.
                         </p>
@@ -117,7 +108,7 @@
                 </div>
                 
                 <div class="story-image order-1 lg:order-2 about-image rounded-lg overflow-hidden opacity-0">
-                    <img src="images/NV_06062025_0895608956.jpg" 
+                    <img src="images/jean.jpg" 
                          alt="Collection NATIC" 
                          class="w-full h-[500px] object-cover">
                 </div>
@@ -126,14 +117,14 @@
             <!-- Founder Section -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-32">
                 <div class="founder-image about-image rounded-lg overflow-hidden opacity-0">
-                    <img src="images/SB-202510140700.jpg" 
+                    <img src="images/elena.jpg" 
                          alt="Fondateur" 
                          class="w-full h-[500px] object-cover">
                 </div>
                 
                 <div class="founder-text flex flex-col justify-center opacity-0">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Le Créateur</h2>
-                    <div class="space-y-4 text-gray-300 text-lg leading-relaxed">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">La Créatrice</h2>
+                    <div class="space-y-4 text-black text-lg leading-relaxed">
                         <p>
                             Derrière NATIC se trouve une vision audacieuse et une passion débordante pour l'art vestimentaire. 
                         </p>
@@ -145,8 +136,8 @@
                         </p>
                     </div>
                     <div class="mt-8">
-                        <div class="text-2xl font-bold text-[#A52A2A]">Elena</div>
-                        <div class="text-gray-400">Fondatrice & Directrice Créative</div>
+                        <div class="text-2xl font-bold text-black">Elena</div>
+                        <div class="text-black">Fondatrice & Directrice Créative</div>
                     </div>
                 </div>
             </div>
@@ -158,25 +149,25 @@
                     <div class="value-card text-center p-8 bg-gray-50 rounded-lg border-2 border-gray-200 hover:border-black transition-all duration-300">
                         <div class="text-5xl mb-4">💎</div>
                         <h3 class="text-xl font-bold mb-3 text-black">Excellence</h3>
-                        <p class="text-gray-600">Nous visons la perfection dans chaque création.</p>
+                        <p class="text-black">Nous visons la perfection dans chaque création.</p>
                     </div>
                     
                     <div class="value-card text-center p-8 bg-gray-50 rounded-lg border-2 border-gray-200 hover:border-black transition-all duration-300">
                         <div class="text-5xl mb-4">🎨</div>
                         <h3 class="text-xl font-bold mb-3 text-black">Créativité</h3>
-                        <p class="text-gray-600">L'innovation est au cœur de notre ADN.</p>
+                        <p class="text-black">L'innovation est au cœur de notre ADN.</p>
                     </div>
                     
                     <div class="value-card text-center p-8 bg-gray-50 rounded-lg border-2 border-gray-200 hover:border-black transition-all duration-300">
                         <div class="text-5xl mb-4">🤝</div>
                         <h3 class="text-xl font-bold mb-3 text-black">Authenticité</h3>
-                        <p class="text-gray-600">Nous restons fidèles à notre vision.</p>
+                        <p class="text-black">Nous restons fidèles à notre vision.</p>
                     </div>
                     
                     <div class="value-card text-center p-8 bg-gray-50 rounded-lg border-2 border-gray-200 hover:border-black transition-all duration-300">
                         <div class="text-5xl mb-4">🌱</div>
                         <h3 class="text-xl font-bold mb-3 text-black">Durabilité</h3>
-                        <p class="text-gray-600">Une mode responsable pour l'avenir.</p>
+                        <p class="text-black">Une mode responsable pour l'avenir.</p>
                     </div>
                 </div>
             </div>
@@ -187,7 +178,7 @@
     <section class="cta-section py-20 px-6 opacity-0">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-4xl md:text-5xl font-bold mb-6">Rejoignez l'Aventure NATIC</h2>
-            <p class="text-xl text-gray-600 mb-8">
+            <p class="text-xl text-black mb-8">
                 Découvrez nos collections et faites partie de notre communauté.
             </p>
             <a href="index.html" class="inline-block bg-black text-white px-8 py-4 text-lg font-semibold hover:bg-gray-800 transition-all duration-300 hover:scale-105">

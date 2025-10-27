@@ -232,19 +232,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ease: 'power3.out'
     });
     
-    // Parallax effect for images
-    gsap.utils.toArray('.about-image img').forEach(img => {
-        gsap.to(img, {
-            scrollTrigger: {
-                trigger: img,
-                start: 'top bottom',
-                end: 'bottom top',
-                scrub: 1
-            },
-            y: -50,
-            ease: 'none'
-        });
-    });
+    // Parallax effect désactivé pour préserver la qualité des images
     
     // Mouse move effect on value cards
     const valueCards = document.querySelectorAll('.value-card');

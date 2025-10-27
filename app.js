@@ -284,6 +284,85 @@ function initAnimations() {
         duration: 1,
         ease: 'power3.in'
     }, '-=1');
+    
+    // Gallery title animation
+    gsap.to('.gallery-title', {
+        scrollTrigger: {
+            trigger: '.gallery-title',
+            start: 'top 80%',
+            toggleActions: 'play none none none'
+        },
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: 'power3.out'
+    });
+    
+    gsap.from('.gallery-title', {
+        scrollTrigger: {
+            trigger: '.gallery-title',
+            start: 'top 80%',
+            toggleActions: 'play none none none'
+        },
+        y: 50,
+        duration: 1,
+        ease: 'power3.out'
+    });
+    
+    // Gallery items stagger animation - alignement fixé
+    gsap.utils.toArray('.gallery-item').forEach((item, index) => {
+        gsap.set(item, { clearProps: 'all' }); // Clear any inline styles
+        
+        gsap.to(item, {
+            scrollTrigger: {
+                trigger: item,
+                start: 'top 85%',
+                toggleActions: 'play none none none'
+            },
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            delay: index * 0.15,
+            ease: 'power3.out',
+            clearProps: 'transform'
+        });
+        
+        gsap.from(item, {
+            scrollTrigger: {
+                trigger: item,
+                start: 'top 85%',
+                toggleActions: 'play none none none'
+            },
+            y: 80,
+            duration: 0.8,
+            delay: index * 0.15,
+            ease: 'power3.out'
+        });
+    });
+    
+    // Gallery CTA animation
+    gsap.to('.gallery-cta', {
+        scrollTrigger: {
+            trigger: '.gallery-cta',
+            start: 'top 80%',
+            toggleActions: 'play none none none'
+        },
+        opacity: 1,
+        scale: 1,
+        duration: 0.8,
+        ease: 'back.out(1.7)'
+    });
+    
+    gsap.from('.gallery-cta', {
+        scrollTrigger: {
+            trigger: '.gallery-cta',
+            start: 'top 80%',
+            toggleActions: 'play none none none'
+        },
+        scale: 0.8,
+        duration: 0.8,
+        ease: 'back.out(1.7)'
+    });
 }
 
 // Initialize everything when DOM is loaded
