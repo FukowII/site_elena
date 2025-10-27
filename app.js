@@ -34,7 +34,7 @@ function init3D() {
     mainLight.castShadow = true;
     scene.add(mainLight);
     
-    const fillLight = new THREE.DirectionalLight(0xA52A2A, 0.6);
+    const fillLight = new THREE.DirectionalLight(0x888888, 0.6);
     fillLight.position.set(-5, 0, -5);
     scene.add(fillLight);
     
@@ -79,9 +79,9 @@ function createEnhancedTShirt() {
     
     const bodyGeometry = new THREE.ExtrudeGeometry(bodyShape, extrudeSettings);
     
-    // Material with better shading
+    // Material with better shading - Noir
     const bodyMaterial = new THREE.MeshStandardMaterial({ 
-        color: 0xA52A2A,
+        color: 0x000000,
         roughness: 0.7,
         metalness: 0.1,
         side: THREE.DoubleSide
@@ -112,7 +112,7 @@ function createEnhancedTShirt() {
     // Collar - V-neck style
     const collarGeometry = new THREE.TorusGeometry(0.5, 0.08, 8, 16, Math.PI);
     const collarMaterial = new THREE.MeshStandardMaterial({ 
-        color: 0x8B2323,
+        color: 0x1a1a1a,
         roughness: 0.8,
         metalness: 0.1
     });
@@ -129,11 +129,11 @@ function createEnhancedTShirt() {
     const ctx = canvas.getContext('2d');
     
     // Background
-    ctx.fillStyle = '#A52A2A';
+    ctx.fillStyle = '#000000';
     ctx.fillRect(0, 0, 512, 512);
     
     // Text
-    ctx.fillStyle = '#000000';
+    ctx.fillStyle = '#FFFFFF';
     ctx.font = 'bold 80px Anton, Arial';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
@@ -154,7 +154,7 @@ function createEnhancedTShirt() {
     
     // Add seam details
     const seamMaterial = new THREE.MeshStandardMaterial({ 
-        color: 0x6B1A1A,
+        color: 0x1a1a1a,
         roughness: 0.9,
         metalness: 0
     });
@@ -173,7 +173,7 @@ function createEnhancedTShirt() {
     // Add subtle wrinkles/folds with bump mapping
     const foldGeometry = new THREE.PlaneGeometry(1.8, 0.1);
     const foldMaterial = new THREE.MeshStandardMaterial({ 
-        color: 0x8B2323,
+        color: 0x2a2a2a,
         transparent: true,
         opacity: 0.3,
         roughness: 1
